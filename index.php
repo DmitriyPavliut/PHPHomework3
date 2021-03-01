@@ -210,8 +210,8 @@ echo "</br></br>Задание 13</br>";
 function checkWords($word1, $word2)
 {
 
-    $word1 = preg_split('//u', $word1, -1, PREG_SPLIT_NO_EMPTY);
-    $word2 = preg_split('//u', $word2, -1, PREG_SPLIT_NO_EMPTY);
+    $word1 = preg_split('//u', $word1);
+    $word2 = preg_split('//u', $word2);
 
     $result = array_diff($word1, $word2);
 
@@ -231,7 +231,7 @@ function checkPalindrom($word)
 {
     $word = str_replace(" ", "", $word);
     $word = mb_strtolower($word);
-    $word = preg_split('//u', $word, -1, PREG_SPLIT_NO_EMPTY);
+    $word = preg_split('//u', $word);
     $wordRev = array_reverse($word);
 
     echo ($word == $wordRev)
@@ -313,7 +313,7 @@ echo "</br></br>Задание 18</br>";
 function breakString($string, $length)
 {
     $newString = '';
-    $arString = preg_split('//u', $string, -1, PREG_SPLIT_NO_EMPTY);
+    $arString = preg_split('//u', $string);
 
     while (count($arString)) {
         for ($i = 0; $i < $length; $i++) {
