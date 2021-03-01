@@ -220,6 +220,7 @@ function checkWords($word1, $word2)
         : "Нельзя составить из первого слова второе";
 }
 
+echo "даны строки: afasdfasdf и aqwasdqwe</br>";
 checkWords('afasdfasdf', 'aqwasdqwe');
 
 
@@ -270,12 +271,12 @@ echo "</br></br>Задание 16</br>";
 
 function checkLengthString($string)
 {
-    $maxWord='';
+    $maxWord = '';
     $string = explode(' ', $string);
 
-    foreach ($string as $value){
-        if(strlen($maxWord)<strlen($value)){
-            $maxWord=$value;
+    foreach ($string as $value) {
+        if (strlen($maxWord) < strlen($value)) {
+            $maxWord = $value;
         }
     }
 
@@ -284,6 +285,34 @@ function checkLengthString($string)
 
 echo "Строка: жили у бабуси два веселых гуся</br>";
 echo checkLengthString("жили у бабуси два веселых гуся");
+
+
+//Задание 17
+echo "</br></br>Задание 17</br>";
+
+function calcDigitInNumber($startNumber, $endNumber, $searchDigit)
+{
+    $i = $startNumber;
+    $count = 0;
+
+    for ($i; $i <= $endNumber; $i++) {
+        if (strripos("$i", "$searchDigit")!==false)
+            $count++;
+    }
+
+    return $count;
+}
+
+echo "Количество 1 в диапазоне от 1 до 100</br>";
+echo calcDigitInNumber(1, 100, 1);
+
+
+//Задание 18
+echo "</br></br>Задание 18</br>";
+
+
 ?>
 </body>
 </html>
+
+
