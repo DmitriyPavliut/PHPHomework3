@@ -295,8 +295,8 @@ function calcDigitInNumber($startNumber, $endNumber, $searchDigit)
     $i = $startNumber;
     $count = 0;
 
-    for ($i; $i <= $endNumber; $i++) {
-        if (strripos("$i", "$searchDigit")!==false)
+    for (; $i <= $endNumber; $i++) {
+        if (strripos("$i", "$searchDigit") !== false)
             $count++;
     }
 
@@ -310,6 +310,28 @@ echo calcDigitInNumber(1, 100, 1);
 //Задание 18
 echo "</br></br>Задание 18</br>";
 
+function breakString($string, $length)
+{
+    $newString = '';
+    $arString = preg_split('//u', $string, -1, PREG_SPLIT_NO_EMPTY);
+
+    while (count($arString)) {
+        for ($i = 0; $i < $length; $i++) {
+            if ($i + 1 == $length && isset($arString[1]) && $arString[0] !== " ") {
+                $newString .= "-";
+            } else {
+                $newString .= array_shift($arString);
+            }
+        }
+
+        $newString .= "</br>";
+
+    }
+
+    return $newString;
+}
+
+echo breakString('Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.', 30);
 
 ?>
 </body>
