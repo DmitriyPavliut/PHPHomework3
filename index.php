@@ -268,6 +268,22 @@ multiplicationTable();
 //Задание 16
 echo "</br></br>Задание 16</br>";
 
+function checkLengthString($string)
+{
+    $maxWord='';
+    $string = explode(' ', $string);
+
+    foreach ($string as $value){
+        if(strlen($maxWord)<strlen($value)){
+            $maxWord=$value;
+        }
+    }
+
+    return $maxWord;
+}
+
+echo "Строка: жили у бабуси два веселых гуся</br>";
+echo checkLengthString("жили у бабуси два веселых гуся");
 ?>
 </body>
 </html>
