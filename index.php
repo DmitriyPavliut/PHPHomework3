@@ -310,7 +310,16 @@ echo calcDigitInNumber(1, 100, 1);
 //Задание 18
 echo "</br></br>Задание 18</br>";
 
-function breakString($string, $length)
+function breakString1($string, $length)
+{
+    $newString = wordwrap($string, $length, "</br>");
+    return $newString;
+}
+
+echo breakString1('Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.', 40);
+echo "</br></br>";
+
+function breakString2($string, $length)
 {
     $newString = '';
     $arString = preg_split('//u', $string);
@@ -331,7 +340,7 @@ function breakString($string, $length)
     return $newString;
 }
 
-echo breakString('Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.', 40);
+echo breakString2('Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.', 40);
 
 ?>
 </body>
