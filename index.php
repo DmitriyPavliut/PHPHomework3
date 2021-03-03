@@ -67,7 +67,7 @@ echo "</br></br>Задание 5</br>";
 
 function getDigitsSum($digit)
 {
-    $num = "$digit";
+    $num = strval($digit);
     $sum = 0;
 
     for ($i = 0; $i < strlen($num); $i++) {
@@ -143,7 +143,7 @@ echo "</br></br>Задание 9</br>";
 
 function returnName($quantity, $nameOne, $nameFew, $nameMany)
 {
-    $quantity = "$quantity";
+    $quantity = strval($quantity);
     $endNumber = $quantity[strlen($quantity) - 1];
     if ($endNumber == 1) return "$quantity $nameOne";
     elseif ($endNumber > 1 && $endNumber < 5) return "$quantity $nameFew";
