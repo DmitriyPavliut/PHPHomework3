@@ -340,7 +340,7 @@ function breakString2($string, $length)
     return $newString;
 }
 
-echo breakString2('Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.', 40);
+echo breakString2('Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.Sale liber et vel. Eu eam dolores lobortis percipitur, quo te equidem deleniti disputando.', 50);
 
 ?>
 </body>
