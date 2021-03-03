@@ -193,15 +193,15 @@ echo "</br></br>Задание 12</br>";
 
 function calcSpeedCar($distance, $time, $type)
 {
-    $speed[1] = $distance / $time . "км/ч";
-    $speed[2] = $distance / $time * 1000 / 3600 . "м/с";
+    $speed["км/ч"] = $distance / $time . "км/ч";
+    $speed["м/с"] = $distance / $time * 1000 / 3600 . "м/с";
 
     return $speed[$type];
 }
 
-echo calcSpeedCar(50, 5, 1);
+echo calcSpeedCar(50, 5, "км/ч");
 echo "</br>";
-echo calcSpeedCar(50, 5, 2);
+echo calcSpeedCar(50, 5, "м/с");
 
 
 //Задание 13
